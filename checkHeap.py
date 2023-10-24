@@ -1,5 +1,7 @@
 import sys
  
+ 
+ # this function will return the Pos of Parent of Node at currently location
 class MaxHeap:
  
     def __init__(self, maxsize):  
@@ -9,21 +11,18 @@ class MaxHeap:
         self.Heap[0] = sys.maxsize
         self.FRONT = 1
  
-    # Function to return the position of
-    # parent for the node currently
-    # at position
     def parent(self, pos):
          
         return pos // 2
  
-    # Function to return the position of
+    # This Function will return the position of
     # the left child for the node currently
     # at posistion
     def leftChild(self, pos):
          
         return 2 * pos
  
-    # Function to return the position of
+    # This Function will return the position of
     # the right child for the node currently
     # at position
     def rightChild(self, pos):
@@ -106,14 +105,20 @@ if __name__ == "__main__":
      
     print('The maxHeap is ')
      #[50, 40, 35, 39, 29, 31, 36] 
-    maxHeap = MaxHeap(10)
-    maxHeap.insert(50)
-    maxHeap.insert(40)
-    maxHeap.insert(35)
-    maxHeap.insert(39)
-    maxHeap.insert(29)
-    maxHeap.insert(31)
-    maxHeap.insert(36)
+    maxHeap = MaxHeap(20)
+    #myList=[60, 55, 45, 42, 31, 20, 35, 15, 20, 17, 10, 18]
+    myList=[ 4, 7]
+     
+    for i in range(len(myList)):
+        maxHeap.insert(myList[i])
+    
+    #maxHeap.insert(50)
+    #maxHeap.insert(40)
+    #maxHeap.insert(35)
+    #maxHeap.insert(39)
+    #maxHeap.insert(29)
+    #maxHeap.insert(31)
+    #maxHeap.insert(36)
  
     maxHeap.Print()
      
